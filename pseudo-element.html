@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <style>
+        h1::before {
+            content: 'Hello! ';
+            color: lime;
+        }
+
+        h1::after {
+            content: ' !Bye';
+            color: lime;
+        }
+
+        blockquote::before {
+            content: open-quote;
+            color: magenta;
+            font-size: 1.5em;
+        }
+
+        blockquote::after {
+            content: close-quote;
+            color: magenta;
+            font-size: 1.5em;
+        }
+
+        .section-title {
+            display: inline-block;
+        }
+
+        .section-title::after,
+        .section-title:hover::before {
+            content: '';
+            display: block;
+            background-color: magenta;
+            height: 2px;
+            width: 100%;
+        }
+
+        .required {
+            display: inline;
+        }
+
+        .required::after {
+            content: ' *';
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is a pseudo element</h1>
+    <h1>This is a pseudo element</h1>
+    <h2 class="section-title">Best Quotes</h2>
+    <blockquote>It's not who i am to underneath but what I do that defines me</blockquote>
+    <blockquote>Don't lose hope</blockquote>
+    <blockquote>GoodBye</blockquote>
+    <p class="required">Name: </p>
+    <input type="text" placeholder="Your Name">
+
+</body>
+
+</html>
